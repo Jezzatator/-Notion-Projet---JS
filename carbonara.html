@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<body>
+
+    <h1>Recette Carbonara</h1>
+
+    <p id="ingredients"></p>
+    <p id="listeDesIngredients"></p>
+    <p id="recetteCarbonara"></p>
+
+    <script>
+        //Première étape
+        const listeIngredients = ["Pâtes", "Oeuf", "Sel", "Poivre", "Lardon", "Oignon", "Parmesan"]
+        console.log(listeIngredients)
+
+        // Deuxième étape
+        let nombreIngredients = listeIngredients.length
+        console.log(nombreIngredients)
+
+        // Quatrième étape 
+        var ingredientSorted = listeIngredients.sort()
+
+        // Troisème étape 
+        var liste = ""
+        for (i = 0; i < nombreIngredients; i++) {
+            liste += i + 1 + " " + ingredientSorted[i] + ", \n"
+        }
+
+        // Show result on the html page
+        document.getElementById("ingredients").innerText = "Pour votre recette de pâtes carbonara il vous faudra " + nombreIngredients + " d'ingrédients,  dont :"
+        document.getElementById("listeDesIngredients").innerText = liste
+
+
+
+    </script>
+</body>
